@@ -1,9 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
 * {
-    padding:0;
-    margin:0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: teal;
+  background-color: #f1f3f8;
+  font-family: "Roboto", sans-serif;
+}
+
+button {
+  font-family: inherit;
+}
+button , input {
+    cursor: pointer;
+    border: none;
+    transition: transform 0.2s linear;
+    margin-bottom:1.5rem;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+}
+
+.heading {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 2.8rem;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.sketch-container {
+  text-align: center;
+}
+.sketch {
+  width: 300px;
+  height: 300px;
+  background: #fff;
+  margin: 2.5rem auto;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type="color"] {
+  width: 80px;
+  height: 80px;
+  border: none;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+input[type="color"]::-webkit-color-swatch {
+  border: none;
+  border-radius: 50px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.btn {
+  border: 1px solid black;
+  color: #333;
+  width: 145px;
+  height: 40px;
+  border-radius: 3px;
+  transition: transform 0.2s linear;
+}
+
+.btn:hover , input[type="color"]:hover {
+  transform: scale(1.05);
+}
+
+.active {
+    background:#333;
+    color:#fff;
+}
+
+
+@media(min-width: 650px) {
+    section {
+        flex-direction: row;
+        justify-content: space-around;
+        margin:0 5rem;
+    }
+    .heading {
+        margin-right:13rem;
+    }
+    .sketch {
+        width: 400px;
+        height: 400px;
+        margin: 2.5rem auto;
+        margin-right:2rem;
+      }
+      .btn {
+        width: 180px;
+        height: 40px;
+      }
+}
+
+@media(min-width: 900px) {
+    .heading {
+        margin-right:28rem;
+    }
+    .sketch {
+        width: 600px;
+        height: 400px;
+        margin: 2.5rem auto;
+        margin-right:2rem;
+      }
 }
